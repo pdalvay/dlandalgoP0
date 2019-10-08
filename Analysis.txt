@@ -1,0 +1,19 @@
+Analysis.txt
+
+Note: I am not considering the file reading part of any of the tasks for the below analysis. Without knowing the full details of the csv read operation, I am guessing it should be a O(n) to populate the calls and texts array from the file system, but I am not sure. 
+In the below analysis of efficiency I am only considering the part other than the reading of files.
+
+Task0.py:
+In the worst case, has a time efficiency of O(1) to read the first and last locations of the texts and the calls from an already in memory array.
+
+Task1.py:
+In the worst case, has a time efficiency of O(n) since we need to traverse the loaded texts and calls arrays once each to accumulate all the unique telephone numbers.
+
+Task2.py:
+In the worst case, has a time efficiency of O(n) since we need to traverse the loaded calls array once to accumulate the telephone numbers and the amount of time the number was on a call.
+
+Task3.py:
+In the worst case, has a time efficiency of O(nlogn) since we need to traverse the loaded calls array once to accumulate the data in a set which is done in O(n). And then to get the set sorted to the lexicographic order, for which we use the sort method, which would be a O(nlogn). O(nlogn) dominates O(n), so the net efficiency is O(nlogn)
+
+Task4.py:
+In the worst case, has a time efficiency of O(nlogn) since we need to traverse the loaded calls and texts arrays once to accumulate the data in a set which is done in O(n). And then to get the set sorted to the lexicographic order, for which we use the sort method, which would be a O(nlogn). O(nlogn) dominates O(n), so the net efficiency is O(nlogn)
